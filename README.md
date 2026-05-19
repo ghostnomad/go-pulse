@@ -55,6 +55,44 @@ SERVER_URL="http://<YOUR_SERVER_IP>:8080/api/report" REPORT_INTERVAL="6h" ./go-p
 
 - Go 1.22+ on all machines running either component
 
+## Usage
+
+### Agent Configuration
+
+The agent is configured via a `.env` file placed in the same directory as the binary. Create the file before running the agent:
+
+```env
+SERVER_URL=http://<YOUR_SERVER_IP>:8080/api/report
+REPORT_INTERVAL=6h
+```
+
+| Variable | Description |
+|---|---|
+| `SERVER_URL` | The full HTTP endpoint of your Collector Server (e.g., `http://192.168.1.50:8080/api/report`). |
+| `REPORT_INTERVAL` | How often the agent collects and reports metrics. Supports duration strings like `10s`, `30m`, or `6h`. |
+
+Once the `.env` file is saved, start the agent with:
+
+```bash
+./go-pulse-agent
+```
+
+### Collector Server Configuration
+
+The server reads its port from an environment variable. You can also define this in a `.env` file in the server's directory:
+
+```env
+PORT=8080
+```
+
+Then start the server with:
+
+```bash
+./go-pulse-server
+```
+
+The dashboard will be available at `http://<YOUR_SERVER_IP>:8080`.
+
 ## Motivation
 
 Managing a homelab means keeping track of a growing number of machines, and existing monitoring solutions tend to be heavy, complex, or overkill for personal use. Go-Pulse was built to solve that — a simple, lightweight way to keep an eye on all assets in a homelab without the overhead of enterprise tooling. The goal was something easy to deploy, easy to understand, and easy to maintain.
