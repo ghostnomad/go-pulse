@@ -97,7 +97,7 @@ The dashboard will be available at `http://<YOUR_SERVER_IP>:8080`.
 
 Managing a homelab means keeping track of a growing number of machines, and existing monitoring solutions tend to be heavy, complex, or overkill for personal use. Go-Pulse was built to solve that — a simple, lightweight way to keep an eye on all assets in a homelab without the overhead of enterprise tooling. The goal was something easy to deploy, easy to understand, and easy to maintain.
 
-## Contributors
+## Contributing
 
 | Name | Role |
 |---|---|
