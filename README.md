@@ -55,6 +55,18 @@ SERVER_URL="http://<YOUR_SERVER_IP>:8080/api/report" REPORT_INTERVAL="6h" ./go-p
 
 - Go 1.22+ on all machines running either component
 
+## Motivation
+
+Managing a homelab means keeping track of a growing number of machines, and existing monitoring solutions tend to be heavy, complex, or overkill for personal use. Go-Pulse was built to solve that — a simple, lightweight way to keep an eye on all assets in a homelab without the overhead of enterprise tooling. The goal was something easy to deploy, easy to understand, and easy to maintain.
+
+## Contributors
+
+| Name | Role |
+|---|---|
+| @ghostnomad | Creator & Maintainer |
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
 ## Further Reading
 
 - [Agent Setup & Configuration](https://github.com/ghostnomad/go-pulse-agent)
